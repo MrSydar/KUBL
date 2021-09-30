@@ -1,0 +1,52 @@
+{
+  "Customer":{
+    "Id":"f359bed2-1f5f-11ec-9621-0242ac130002",
+    "Name":"Klient Indywidualny",
+    "RegNo":null,
+    "NotTDCustomer":true,
+    "VatRegNo":null,
+    "CurrencyCode":"PLN",
+    "PaymentDeadLine":1,
+    "RefNoBase":null,
+    "Address":"00-000 Poznan",
+    "CountryCode":"PL",
+    "County":null,
+    "City":"Poznan",
+    "PostalCode":"00-000",
+    "PhoneNo":null,
+    "PhoneNo2":null,
+    "HomePage":null,
+    "Email":null
+  },
+  "DocDate":"20210927095755",
+  "DueDate":"20210927095755",
+  "TransactionDate":"20210927095755",
+  "InvoiceNo":"f359bed2-1f5f-11ec-9621-0242ac130002",
+  "RefNo":"03202000000038",
+  "CurrencyCode":"PLN",
+  "InvoiceRow":[
+    {
+      "Item":{
+        "Code":"1",
+        "Description":"Usługi transportowe",
+        "Type":2,
+        "UOMName":"szt."
+      },
+      "Quantity":"1",
+      "Price":"20.1",
+      "DiscountPct":0,
+      "DiscountAmount":0,
+      "TaxId":"f359bed2-1f5f-11ec-9621-0242ac130002"
+    }
+  ],
+  "TaxAmount":[
+    {
+      "TaxId":"f359bed2-1f5f-11ec-9621-0242ac130002",
+      "Amount":"1.6008"
+    }
+  ],
+  "RoundingAmount":0,
+  "TotalAmount":"1.6008",
+  "Hcomment":"",
+  "Fcomment":""
+}
