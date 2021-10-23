@@ -17,7 +17,7 @@ public class Invoice {
     private String transactionDate;
 
     @JsonProperty("InvoiceNo")
-    private String InvoiceNo;
+    private String invoiceNo;
 
     @JsonProperty("InvoiceRow")
     private InvoiceRow[] invoiceRows;
@@ -27,6 +27,17 @@ public class Invoice {
 
     @JsonProperty("TotalAmount")
     private String totalAmount;
+
+    public Invoice(Customer customer, String docDate, String dueDate, String transactionDate, String invoiceNo, InvoiceRow[] invoiceRow, String totalAmount, TaxAmount[] taxAmount) {
+        this.customer = customer;
+        this.docDate = docDate;
+        this.dueDate = dueDate;
+        this.transactionDate = transactionDate;
+        this.invoiceNo = invoiceNo;
+        this.invoiceRows = invoiceRow;
+        this.totalAmount = totalAmount;
+        this.taxAmounts = taxAmount;
+    }
 
     public Customer getCustomer() {
         return customer;
@@ -61,11 +72,11 @@ public class Invoice {
     }
 
     public String getInvoiceNo() {
-        return InvoiceNo;
+        return invoiceNo;
     }
 
     public void setInvoiceNo(String invoiceNo) {
-        InvoiceNo = invoiceNo;
+        this.invoiceNo = invoiceNo;
     }
 
     public InvoiceRow[] getInvoiceRows() {
@@ -90,17 +101,6 @@ public class Invoice {
 
     public void setTotalAmount(String totalAmount) {
         this.totalAmount = totalAmount;
-    }
-
-    public Invoice(Customer customer, String docDate, String dueDate, String transactionDate, String invoiceNo, com.mrsydar.kubl.engine.structures.invoice.InvoiceRow[] invoiceRow, String totalAmount, com.mrsydar.kubl.engine.structures.invoice.TaxAmount[] taxAmount) {
-        this.customer = customer;
-        this.docDate = docDate;
-        this.dueDate = dueDate;
-        this.transactionDate = transactionDate;
-        InvoiceNo = invoiceNo;
-        invoiceRows = invoiceRow;
-        this.totalAmount = totalAmount;
-        taxAmounts = taxAmount;
     }
 
 }

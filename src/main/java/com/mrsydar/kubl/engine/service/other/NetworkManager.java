@@ -1,5 +1,6 @@
 package com.mrsydar.kubl.engine.service.other;
 
+import com.mrsydar.kubl.engine.service.exceptions.NotSuccessResponseCodeExcetion;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -28,7 +29,7 @@ public class NetworkManager {
         }
 
         if (statusCode < 200 || statusCode > 299) {
-            throw new RuntimeException(String.format("Bad response code: %d", statusCode));
+            throw new NotSuccessResponseCodeExcetion(String.format("Bad response code: %d", statusCode));
         } else return responseBodyStr;
     }
 

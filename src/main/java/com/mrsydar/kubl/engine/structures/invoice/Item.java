@@ -10,6 +10,11 @@ public class Item {
     @JsonProperty("Description")
     private String description;
 
+    public Item(String code, String description) {
+        this.code = code;
+        this.description = description;
+    }
+
     public String getCode() {
         return code;
     }
@@ -23,11 +28,6 @@ public class Item {
     }
 
     public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Item(String code, String description) {
-        this.code = code;
         this.description = description;
     }
 }

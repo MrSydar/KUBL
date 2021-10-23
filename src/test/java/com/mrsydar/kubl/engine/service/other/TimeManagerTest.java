@@ -21,7 +21,7 @@ class TimeManagerTest {
     @BeforeAll
     public static void loadExpectedResponseBody() throws IOException {
         expectedResponseBody = Files.readString(
-                Path.of("src/test/resources/data_for_warsaw_date.json"),
+                Path.of("src/test/resources/time_manager/data_for_warsaw_date.json"),
                 StandardCharsets.UTF_8
         );
     }

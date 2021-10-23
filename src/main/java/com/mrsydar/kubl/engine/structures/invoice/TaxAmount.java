@@ -10,6 +10,11 @@ public class TaxAmount {
     @JsonProperty("Amount")
     private String amount;
 
+    public TaxAmount(String taxId, String amount) {
+        this.taxId = taxId;
+        this.amount = amount;
+    }
+
     public String getTaxId() {
         return taxId;
     }
@@ -23,11 +28,6 @@ public class TaxAmount {
     }
 
     public void setAmount(String amount) {
-        this.amount = amount;
-    }
-
-    public TaxAmount(String taxId, String amount) {
-        this.taxId = taxId;
         this.amount = amount;
     }
 

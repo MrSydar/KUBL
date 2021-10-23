@@ -7,7 +7,11 @@ import java.time.LocalDate;
 
 public class TimeManager {
 
-    private NetworkManager networkManager;
+    private final NetworkManager networkManager;
+
+    public TimeManager(NetworkManager networkManager) {
+        this.networkManager = networkManager;
+    }
 
     public LocalDate requestCurrentPolishDate() throws IOException {
         String responseBodyStr = networkManager.get(
@@ -18,10 +22,6 @@ public class TimeManager {
         String dateStr = responseJson.getString("datetime").substring(0, 10);
 
         return LocalDate.parse(dateStr);
-    }
-
-    public TimeManager(NetworkManager networkManager) {
-        this.networkManager = networkManager;
     }
 
 }

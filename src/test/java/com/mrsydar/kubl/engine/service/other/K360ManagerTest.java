@@ -1,11 +1,13 @@
 package com.mrsydar.kubl.engine.service.other;
 
+import com.mrsydar.kubl.engine.service.k360.K360Manager;
+import com.mrsydar.kubl.engine.service.k360.K360NetworkLoader;
 import com.mrsydar.kubl.engine.structures.invoice.Customer;
 import com.mrsydar.kubl.engine.structures.invoice.Invoice;
 import com.mrsydar.kubl.engine.structures.invoice.InvoiceRow;
 import com.mrsydar.kubl.engine.structures.invoice.TaxAmount;
-import com.mrsydar.kubl.engine.structures.other.FullCustomer;
-import com.mrsydar.kubl.engine.structures.other.NamedCustomer;
+import com.mrsydar.kubl.engine.structures.customer.FullCustomer;
+import com.mrsydar.kubl.engine.structures.customer.NamedCustomer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;

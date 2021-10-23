@@ -1,6 +1,7 @@
 package com.mrsydar.kubl.engine.service.other;
 
-import com.mrsydar.kubl.engine.structures.other.CompleteCustomer;
+import com.mrsydar.kubl.engine.service.k360.CustomerManager;
+import com.mrsydar.kubl.engine.structures.customer.CompleteCustomer;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -20,7 +21,7 @@ class CustomerManagerTest {
     @BeforeAll
     public static void loadExpectedResponseBody() throws IOException {
         expectedResponseBody = Files.readString(
-                Path.of("src/test/resources/data_for_nip_5252248481.json"),
+                Path.of("src/test/resources/customer_manager/data_for_nip_5252248481.json"),
                 StandardCharsets.UTF_8
         );
     }

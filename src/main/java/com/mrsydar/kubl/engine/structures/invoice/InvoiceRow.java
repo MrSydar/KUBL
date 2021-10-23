@@ -16,6 +16,13 @@ public class InvoiceRow {
     @JsonProperty("Price")
     private String price;
 
+    public InvoiceRow(com.mrsydar.kubl.engine.structures.invoice.Item item, String quantity, String price, String taxId) {
+        this.item = item;
+        this.quantity = quantity;
+        this.price = price;
+        this.taxId = taxId;
+    }
+
     public String getTaxId() {
         return taxId;
     }
@@ -46,13 +53,6 @@ public class InvoiceRow {
 
     public void setPrice(String price) {
         this.price = price;
-    }
-
-    public InvoiceRow(com.mrsydar.kubl.engine.structures.invoice.Item item, String quantity, String price, String taxId) {
-        this.item = item;
-        this.quantity = quantity;
-        this.price = price;
-        this.taxId = taxId;
     }
 
 }
