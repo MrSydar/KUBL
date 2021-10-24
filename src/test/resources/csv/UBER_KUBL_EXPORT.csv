@@ -1,0 +1,4 @@
+﻿invoice_number,issue_date,c_name,c_nip,net_value,vat_rate,vat_value,gross_value
+DGJBBGDT-01-2020-0000738,20200127202001,Magda Wysoka,,19.9,0.08,1.59,21.49
+DGJBBGDT-01-2020-0000744,20200127202121,Juliana Pąkke,1234567890,41.81,0.08,3.35,45.16
+DGJBBGDT-01-2020-0000751,20200128214530,Оксана Cереліва,,16.68,0.08,1.33,18.01

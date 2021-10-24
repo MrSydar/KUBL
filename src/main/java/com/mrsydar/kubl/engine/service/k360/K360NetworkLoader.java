@@ -1,11 +1,12 @@
 package com.mrsydar.kubl.engine.service.k360;
 
 import com.mrsydar.kubl.engine.service.exceptions.NotSuccessResponseCodeExcetion;
-import com.mrsydar.kubl.engine.service.hash.Hasher;
+import com.mrsydar.kubl.engine.service.util.Hasher;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -23,6 +24,12 @@ public class K360NetworkLoader {
         this.apiId = apiId;
         this.apiKey = apiKey;
         this.client = client;
+    }
+
+    public K360NetworkLoader(String apiId, String apiKey) {
+        this.apiId = apiId;
+        this.apiKey = apiKey;
+        this.client = HttpClients.createDefault();
     }
 
     public String post(String destUrl, String jsonObject) throws IOException {

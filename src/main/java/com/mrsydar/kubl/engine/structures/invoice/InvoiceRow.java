@@ -2,6 +2,8 @@ package com.mrsydar.kubl.engine.structures.invoice;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.Objects;
+
 public class InvoiceRow {
 
     @JsonProperty("TaxId")
@@ -55,4 +57,16 @@ public class InvoiceRow {
         this.price = price;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        InvoiceRow that = (InvoiceRow) o;
+        return taxId.equals(that.taxId) && item.equals(that.item) && quantity.equals(that.quantity) && price.equals(that.price);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(taxId, item, quantity, price);
+    }
 }

@@ -2,6 +2,9 @@ package com.mrsydar.kubl.engine.structures.invoice;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class Invoice {
 
     @JsonProperty("Customer")
@@ -103,4 +106,19 @@ public class Invoice {
         this.totalAmount = totalAmount;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Invoice invoice = (Invoice) o;
+        return customer.equals(invoice.customer) && docDate.equals(invoice.docDate) && dueDate.equals(invoice.dueDate) && transactionDate.equals(invoice.transactionDate) && invoiceNo.equals(invoice.invoiceNo) && Arrays.equals(invoiceRows, invoice.invoiceRows) && Arrays.equals(taxAmounts, invoice.taxAmounts) && totalAmount.equals(invoice.totalAmount);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hash(customer, docDate, dueDate, transactionDate, invoiceNo, totalAmount);
+        result = 31 * result + Arrays.hashCode(invoiceRows);
+        result = 31 * result + Arrays.hashCode(taxAmounts);
+        return result;
+    }
 }
